@@ -1,51 +1,51 @@
 .form {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form:not(:last-child) {
+  margin-left: 20%;
 }
 
 .label {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  color: #333232;
+  justify-content: space-between;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.label:not(:last-child) {
+  margin-right: 20px;
 }
 
 .input {
-  padding: 11px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+  margin-left: 10px;
+  border: 1px solid black;
 }
 
+.input:hover,
 .input:focus {
-  outline: transparent;
-  border: 1px solid #2196f3;
+  border: 2px solid rgb(3, 112, 9);
 }
 
 .buttonWrapper {
-  text-align: center;
+  margin-top: 10px;
 }
 
 .button {
-  min-width: 150px;
-  height: 40px;
-  border: 0px solid transparent;
+  min-width: 122px;
+  height: 35px;
+  border: 0 solid transparent;
   border-radius: 4px;
   color: #fff;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ee4a4a;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
   cursor: pointer;
 }
+
 .button:hover,
 .button:focus {
-  opacity: 0.8;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ec6565;
 }
