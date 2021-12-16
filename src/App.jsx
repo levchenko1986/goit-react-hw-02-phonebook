@@ -37,11 +37,11 @@ class App extends Component {
 
   filterContacts = () => {
     const { contacts, filter } = this.state;
-
-    const normalizedFilter = filter.toLowerCase();
-
-    return contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(normalizedFilter)
+    if (!filter) {
+      return contacts;
+    }
+    return contacts.filter((contacts) =>
+      contacts.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
 
